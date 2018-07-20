@@ -12125,7 +12125,8 @@ Percentage of humans detected in dog file: 11.0%
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Question 2:</strong> This algorithmic choice necessitates that we communicate to the user that we accept human images only when they provide a clear view of a face (otherwise, we risk having unneccessarily frustrated users!). In your opinion, is this a reasonable expectation to pose on the user? If not, can you think of a way to detect humans in images that does not necessitate an image with a clearly presented face?</p>
 <p><strong>Answer:</strong></p>
-<p>I don't think so. I think there should be another algorithm which can extract features of human faces which are only including eyes, mouths, etc. Features like human side face should also be included.</p>
+<p>Based on my search about Haar Cascade, the main of it is achieving a good performance for both accuracy and time-complexity, when you have a number of weak classifier. The weak classifier must work at least with 51% accuracy. The cascade classifier reject the many of samples in first node classifier with an efficient time. Which means it might lower the accuracy in comprimse of time.<br>
+I don't think so. I think there should be another algorithm which can extract features of human faces which are only including eyes, mouths, etc. Features like human side face should also be included.</p>
 <p>We suggest the face detector from OpenCV as a potential way to detect human images in your algorithm, but you are free to explore other approaches, especially approaches that make use of deep learning :).  Please use the code cell below to design and test your own face detection algorithm.  If you decide to pursue this <em>optional</em> task, report performance on each of the datasets.</p>
 
 </div>
@@ -13114,7 +13115,8 @@ test_{network} = bottleneck_features['test']</code></pre>
 </code></pre>
 <p><strong>Question 5:</strong> Outline the steps you took to get to your final CNN architecture and your reasoning at each step.  Describe why you think the architecture is suitable for the current problem.</p>
 <p><strong>Answer:</strong></p>
-<p>I used the exact same architeture as above, the only difference is the bottleneck features. Just want to compare the difference between two different bottleneck features. And it turned out Resnet50 did much better than VGG16.</p>
+<p>I used the exact same architeture as above, the only difference is the bottleneck features. Just want to compare the difference between two different bottleneck features. And it turned out Resnet50 did much better than VGG16.
+The reason why I choose transfer learning is that it can highly reduce the time without losing the accuracy with a pre-trained model. Transfer learning is where pre-trained models are used as the starting point on image preocessing tasks given the vast compute and time resources required to develop neural network models on these problems and from the huge jumps in skill that they provide on related problems.</p>
 
 </div>
 </div>
