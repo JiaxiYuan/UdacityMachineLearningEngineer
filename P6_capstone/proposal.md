@@ -4,16 +4,14 @@ Jiaxi Yuan
 August 7th, 2018
 
 ### Domain Background
-_(approx. 1-2 paragraphs)_
 
 Music is an essential part of our daily life. Music can improve our mood, reduce our stress, provide us comfort. For the last few decades, music is also applied to some therapies to cure psychological problems. Music has a long history, starting from acient people using stones to make some sound to nowadays people invented thousands of instruments or devices to create attractive melody. The problem of how to create good music perpelxes people all the time, especially for people who don't have enough knowledge of music theories. 
 
 Music has different types, such as Jazz, Blues, Classic. Same type of  music always has something in common. Machine learning is then a good approach to look into the inner connection. With the common part, it is possible to compose the music with the machine. Or even, we can combine different types of music together and create something new. I'm a big fan of music without the ability to compose. With machine learning, I might compose my first song.
 
 ### Problem Statement
-_(approx. 1 paragraph)_
 
-In this section, clearly describe the problem that is to be solved. The problem described should be well defined and should have at least one relevant potential solution. Additionally, describe the problem thoroughly such that it is clear that the problem is quantifiable (the problem can be expressed in mathematical or logical terms) , measurable (the problem can be measured by some metric and clearly observed), and replicable (the problem can be reproduced and occurs more than once).
+The problem to be investigated here is how to use machine learning to compose a classic song. Some sample classic songs will be used as the training data and a model will be generated which can be used to compose a new song. The input data(song) needs some preprocessing before it can be used for training. During the training, a "memory cell" value should be passed down for multiple time steps. Finally, the model should be able to compose a song which sounds the same style of the input songs.
 
 ### Datasets and Inputs
 _(approx. 2-3 paragraphs)_
