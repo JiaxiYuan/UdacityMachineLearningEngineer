@@ -11,12 +11,16 @@ Music has different types, such as Jazz, Blues, Classic. Same type of  music alw
 
 ### Problem Statement
 
-The problem to be investigated here is how to use machine learning to compose a classic song. Some sample classic songs will be used as the training data and a model will be generated which can be used to compose a new song. The input data(song) needs some preprocessing before it can be used for training. During the training, a "memory cell" value should be passed down for multiple time steps. Finally, the model should be able to compose a song which sounds the same style of the input songs.
+The problem to be investigated here is how to use machine learning to compose a classical song. Some sample classical songs will be used as the training data and a model will be generated which can be used to compose a new song. The input data(song) needs some preprocessing before it can be used for training. During the training, a "memory cell" value should be passed down for multiple time steps. Finally, the model should be able to compose a song which sounds the same style of the input songs.
 
 ### Datasets and Inputs
-_(approx. 2-3 paragraphs)_
 
-In this section, the dataset(s) and/or input(s) being considered for the project should be thoroughly described, such as how they relate to the problem and why they should be used. Information such as how the dataset or input is (was) obtained, and the characteristics of the dataset or input, should be included with relevant references and citations as necessary It should be clear how the dataset(s) or input(s) will be used in the project and whether their use is appropriate given the context of the problem.
+The dataset is provided by freemidi.org. I chose 5 songs under the genre classical from Richard Clayderman. All of the five are piano songs. The input audio is in the format of MIDI. MIDI is a technical standard that describes a communications protocol, digital interface, and electrical connectors. MIDI format audio specifies notation, pitch which after some data processing we can use as input data.
+
+Two objects are included in the input data, Note and Chord. Note includes information about pitch, octave, and offset. Chord is a container for a set of notes that are played at the same time.
+- Pitch: the frequency of the sound, represented by [A, B, C, D, E, F, G]
+- Octave: set of pitches you use
+- Offset: where the note is located in the piece
 
 ### Solution Statement
 _(approx. 1 paragraph)_
