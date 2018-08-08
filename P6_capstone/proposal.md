@@ -29,6 +29,7 @@ First, some preprocessing of the audio needs to be done. Music21 is a Python-bas
 ### Benchmark Model
 
 Music is a relatively subjective thing. So it is hard to find a benchmark due to people's personal preference. However, there's research project called Magenta provided by Google aimed at exploring the role of machine learning in the process of creating art and music. There's a pre-trained model called melody_rnn which can be used to generate music. Some comparison can be made between the output of this project and the output from the pre-trained model.
+
 link: https://github.com/tensorflow/magenta/tree/master/magenta/models/melody_rnn
 
 ### Evaluation Metrics
