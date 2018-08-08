@@ -23,9 +23,8 @@ Two objects are included in the input data, Note and Chord. Note includes inform
 - Offset: where the note is located in the piece
 
 ### Solution Statement
-_(approx. 1 paragraph)_
 
-In this section, clearly describe a solution to the problem. The solution should be applicable to the project domain and appropriate for the dataset(s) or input(s) given. Additionally, describe the solution thoroughly such that it is clear that the solution is quantifiable (the solution can be expressed in mathematical or logical terms) , measurable (the solution can be measured by some metric and clearly observed), and replicable (the solution can be reproduced and occurs more than once).
+First, some preprocessing of the audio needs to be done. Music21 is a Python-based toolkit for computer-aided musicology. It can grab music information such as notation, pitch from the MIDI file. The training dataset will be generated after. The method chosen to train the model is LSTM, which is used for "remembering" values over arbitrary time intervals. Long short-term memory (LSTM) units are a building unit for layers of RNN. Finally, the model trained can be used to compose music.
 
 ### Benchmark Model
 _(approximately 1-2 paragraphs)_
