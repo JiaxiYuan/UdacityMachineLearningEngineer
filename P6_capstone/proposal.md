@@ -27,9 +27,9 @@ Two objects are included in the input data, Note and Chord. Note includes inform
 First, some preprocessing of the audio needs to be done. Music21 is a Python-based toolkit for computer-aided musicology. It can grab music information such as notation, pitch from the MIDI file. The training dataset will be generated after. The method chosen to train the model is LSTM, which is used for "remembering" values over arbitrary time intervals. Long short-term memory (LSTM) units are a building unit for layers of RNN. Finally, the model trained can be used to compose music.
 
 ### Benchmark Model
-_(approximately 1-2 paragraphs)_
 
-In this section, provide the details for a benchmark model or result that relates to the domain, problem statement, and intended solution. Ideally, the benchmark model or result contextualizes existing methods or known information in the domain and problem given, which could then be objectively compared to the solution. Describe how the benchmark model or result is measurable (can be measured by some metric and clearly observed) with thorough detail.
+Music is a relatively subjective thing. So it is hard to find a benchmark due to people's personal preference. However, there's research project called Magenta provided by Google aimed at exploring the role of machine learning in the process of creating art and music. There's a pre-trained model called melody_rnn which can be used to generate music. Some comparison can be made between the output of this project and the output from the pre-trained model.
+link: https://github.com/tensorflow/magenta/tree/master/magenta/models/melody_rnn
 
 ### Evaluation Metrics
 _(approx. 1-2 paragraphs)_
