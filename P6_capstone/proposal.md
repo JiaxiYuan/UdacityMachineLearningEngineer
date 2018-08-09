@@ -15,7 +15,7 @@ The problem to be investigated here is how to use machine learning to compose a 
 
 ### Datasets and Inputs
 
-The dataset is provided by freemidi.org. I chose 5 songs under the genre classical from Richard Clayderman. All of the five are piano songs. The input audio is in the format of MIDI. MIDI is a technical standard that describes a communications protocol, digital interface, and electrical connectors. MIDI format audio specifies notation, pitch which after some data processing we can use as input data.
+The dataset is provided by freemidi.org. 5~10 songs will be chosen under the genre classical from Richard Clayderman. All of the five are claasical piano songs. The input audio is in the format of MIDI. MIDI is a technical standard that describes a communications protocol, digital interface, and electrical connectors. MIDI format audio specifies notation, pitch which after some data processing we can use as input data.
 
 Two objects are included in the input data, Note and Chord. Note includes information about pitch, octave, and offset. Chord is a container for a set of notes that are played at the same time.
 - Pitch: the frequency of the sound, represented by [A, B, C, D, E, F, G]
@@ -33,9 +33,8 @@ Music is a relatively subjective thing. So it is hard to find a benchmark due to
 link: https://github.com/tensorflow/magenta/tree/master/magenta/models/melody_rnn
 
 ### Evaluation Metrics
-_(approx. 1-2 paragraphs)_
 
-In this section, propose at least one evaluation metric that can be used to quantify the performance of both the benchmark model and the solution model. The evaluation metric(s) you propose should be appropriate given the context of the data, the problem statement, and the intended solution. Describe how the evaluation metric(s) are derived and provide an example of their mathematical representations (if applicable). Complex evaluation metrics should be clearly defined and quantifiable (can be expressed in mathematical or logical terms).
+It is difficult to evalute the output melody. Even with the benchmark mentioned above, there's no quantized way to evaluate the output. However, it's not a hard thing to make a judgement on if the model trained is good or not by just easily listening to the music generated. What is hard here is to have a evaluation metrics to do the comparison.
 
 ### Project Design
 _(approx. 1 page)_
