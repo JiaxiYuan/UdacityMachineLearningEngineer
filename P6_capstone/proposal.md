@@ -37,16 +37,7 @@ link: https://github.com/tensorflow/magenta/tree/master/magenta/models/melody_rn
 It is difficult to evalute the output melody. Even with the benchmark mentioned above, there's no quantized way to evaluate the output. However, it's not a hard thing to make a judgement on if the model trained is good or not by just easily listening to the music generated. What is hard here is to have a evaluation metrics to do the comparison.
 
 ### Project Design
-_(approx. 1 page)_
 
-In this final section, summarize a theoretical workflow for approaching a solution given the problem. Provide thorough discussion for what strategies you may consider employing, what analysis of the data might be required before being used, or which algorithms will be considered for your implementation. The workflow and discussion that you provide should align with the qualities of the previous sections. Additionally, you are encouraged to include small visualizations, pseudocode, or diagrams to aid in describing the project design, but it is not required. The discussion should clearly outline your intended workflow of the capstone project.
-
------------
-
-**Before submitting your proposal, ask yourself. . .**
-
-- Does the proposal you have written follow a well-organized structure similar to that of the project template?
-- Is each section (particularly **Solution Statement** and **Project Design**) written in a clear, concise and specific fashion? Are there any ambiguous terms or phrases that need clarification?
-- Would the intended audience of your project be able to understand your proposal?
-- Have you properly proofread your proposal to assure there are minimal grammatical and spelling mistakes?
-- Are all the resources used for this project correctly cited and referenced?
+1. Data preprocessing: Some MIDI audio files will be used as the raw input. Music21 library will be used to gather all necessary music information from the audio such as chord, pitch. The audio will be translated to the training data with different features.
+2. Training: I will use a Long Short-Term Memory (LSTM) network. It is a type of Recurrent Neural Network that can efficiently learn via gradient descent. After the training, a weigh file will be generated to be used to compose the new melody.
+3. Testing and optimizing: Apply the trained model to generate the melody and compare it with the benchmark. If it's not good enough, some new training method can be tried to optimize the model.
