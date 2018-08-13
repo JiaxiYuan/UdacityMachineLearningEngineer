@@ -15,6 +15,8 @@ The prblem to be investigated here is how to use machine learning to realized ha
 
 ### Datasets and Inputs
 
+The dataset is called MNIST, provided by Yann LeCun, Corinna Cortes and Christopher Burges. The dataset is used for evaluating machine learning models on the handwritten digit classification problem. 
+
 The dataset is provided by freemidi.org. 5~10 songs will be chosen under the genre classical from Richard Clayderman. All of the five are claasical piano songs. The input audio is in the format of MIDI. MIDI is a technical standard that describes a communications protocol, digital interface, and electrical connectors. MIDI format audio specifies notation, pitch which after some data processing we can use as input data.
 
 Two objects are included in the input data, Note and Chord. Note includes information about pitch, octave, and offset. Chord is a container for a set of notes that are played at the same time.
