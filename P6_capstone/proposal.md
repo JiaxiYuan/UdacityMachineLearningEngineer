@@ -11,7 +11,7 @@ Digits used worldwide are only comprised of 10 different characters, 0~9. It see
 
 ### Problem Statement
 
-The problem to be investigated here is how to use machine learning to compose a classical song. Some sample classical songs will be used as the training data and a model will be generated which can be used to compose a new song. The input data(song) needs some preprocessing before it can be used for training. During the training, a "memory cell" value should be passed down for multiple time steps. Finally, the model should be able to compose a song which sounds the same style of the input songs.
+The prblem to be investigated here is how to use machine learning to realized handwritten digits recognition. MINIST dataset will be used as both training data and testing data. Differnt training methods will be appied, such as SVM, CNN, deep learning. After applying the model to testing data, a accuracy comparison will be done between different models to see which one has the best result. Some preprocessing of the input data might be done before training.
 
 ### Datasets and Inputs
 
