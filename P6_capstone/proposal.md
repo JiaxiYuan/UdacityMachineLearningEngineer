@@ -15,31 +15,24 @@ The prblem to be investigated here is how to use machine learning to realized ha
 
 ### Datasets and Inputs
 
-The dataset is called MNIST, provided by Yann LeCun, Corinna Cortes and Christopher Burges. The dataset is used for evaluating machine learning models on the handwritten digit classification problem. 
+The dataset is called MNIST, provided by Yann LeCun, Corinna Cortes and Christopher Burges. The dataset is used for evaluating machine learning models on the handwritten digit classification problem. Images of digits were taken from a variety of scanned documents, normalized in size and centered.
 
-The dataset is provided by freemidi.org. 5~10 songs will be chosen under the genre classical from Richard Clayderman. All of the five are claasical piano songs. The input audio is in the format of MIDI. MIDI is a technical standard that describes a communications protocol, digital interface, and electrical connectors. MIDI format audio specifies notation, pitch which after some data processing we can use as input data.
-
-Two objects are included in the input data, Note and Chord. Note includes information about pitch, octave, and offset. Chord is a container for a set of notes that are played at the same time.
-- Pitch: the frequency of the sound, represented by [A, B, C, D, E, F, G]
-- Octave: set of pitches you use
-- Offset: where the note is located in the piece
+Each image is a 28 by 28 pixel square. For each image, there's a label represeting the 10 digits or 10 classes.
 
 ### Solution Statement
 
-First, some preprocessing of the audio needs to be done. Music21 is a Python-based toolkit for computer-aided musicology. It can grab music information such as notation, pitch from the MIDI file. The training dataset will be generated after. The method chosen to train the model is LSTM, which is used for "remembering" values over arbitrary time intervals. Long short-term memory (LSTM) units are a building unit for layers of RNN. Finally, the model trained can be used to compose music.
+First, the data set will be loaded and be split into training and testing data. As each input data has a label, supervised learning will be applied. In order to have the best results, different training methods will be tried, such as K-nearest, SVM, deep learning. After training, the model will be applied to the testing data and get the accuracy.
 
 ### Benchmark Model
 
-Music is a relatively subjective thing. So it is hard to find a benchmark due to people's personal preference. However, there's research project called Magenta provided by Google aimed at exploring the role of machine learning in the process of creating art and music. There's a pre-trained model called melody_rnn which can be used to generate music. Some comparison can be made between the output of this project and the output from the pre-trained model. There's no quantized way to judge if the output is ideal or not.
-
-link: https://github.com/tensorflow/magenta/tree/master/magenta/models/melody_rnn
+A Kaggle competition called Digit Recongnizer can be used as the benchmark. The dataset provided is much less than the dataset provided by MNIST. The good accuracy can reach to over 99%. The result can be used as the benchmark of this project.
 
 ### Evaluation Metrics
 
-It is difficult to evalute the output melody. Even with the benchmark mentioned above, there's no quantized way to evaluate the output. However, it's not a hard thing to make a judgement on if the model trained is good or not by just easily listening to the music generated. What is hard here is to have a evaluation metrics to do the comparison.
+As mentioned above, the top Kaggle competitioners can make the accuracy to over 99%. I'll use this as a target. At least 95% of the accuracy rate is expected. And the best training method with the best performance will be reported finally. 
 
 ### Project Design
 
-1. Data preprocessing: Some MIDI audio files will be used as the raw input. Music21 library will be used to gather all necessary music information from the audio such as chord, pitch. The audio will be translated to the training data with different features.
-2. Training: I will use a Long Short-Term Memory (LSTM) network. It is a type of Recurrent Neural Network that can efficiently learn via gradient descent. After the training, a weigh file will be generated to be used to compose the new melody.
-3. Testing and optimizing: Apply the trained model to generate the melody and compare it with the benchmark. If it's not good enough, some new training method can be tried to optimize the model.
+1. Data preprocessing: Load the the MNIST data, perform some preprocessing to the data. Split the data into training data and testing data.
+2. Training: Different training methods will be tried, such as K-nearest, SVM, CNN, deep learning with diffrent layer combinations.  After the training, the model will be applied to testing data..
+3. Testing and optimizing: Apply the trained model to the testing data and get the final accuracy of different models. Find the best way to do digit recognition. After choosing the best model, try different parameters to optimize the model.
