@@ -15,9 +15,9 @@ The prblem to be investigated here is how to use machine learning to realized tr
 
 ### Datasets and Inputs
 
-The dataset is called GTSRB, known as German Traffic Sign Recognition Benchmark. GTSRB is a multi-class, single-image classification challenge held at the International Joint Conference on Neural Networks (IJCNN) 2011. 
+What I will use is the preprocessed data set from another Udacity project called German Traffic Sign Recognition. The dataset is originally called GTSRB, known as German Traffic Sign Recognition Benchmark. GTSRB is a multi-class, single-image classification challenge held at the International Joint Conference on Neural Networks (IJCNN) 2011. 
 
-The images contain one traffic sign each. They contain a border of 10 % around the actual traffic sign (at least 5 pixels) to allow for edge-based approaches. The image size vart between 15*15 to 250*250 pixels. The training data ste conatins 39209 training images in 43 classes. The test data set conatins 12630 test images. Each image has an annotation which includes:
+The images contain one traffic sign each. They contain a border of 10 % around the actual traffic sign (at least 5 pixels) to allow for edge-based approaches. The image size vart between 15*15 to 250*250 pixels. The training data ste conatins 34799 training images in 43 classes. The test data set conatins 12630 test images. Each image has an annotation which includes:
 1. Filename: Filename of corresponding image
 2. Width: Width of the image
 3. Height: Height of the image
