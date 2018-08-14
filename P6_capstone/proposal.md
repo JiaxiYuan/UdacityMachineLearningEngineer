@@ -25,7 +25,7 @@ The images contain one traffic sign each. They contain a border of 10 % around t
 5. ROI.y1: Y-coordinate of top-left corner of traffic sign bounding box
 6. ROI.x2: X-coordinate of bottom-right corner of traffic sign bounding box
 7. ROI.y2: Y-coordinate of bottom-right corner of traffic sign bounding box
-8. ClassID: Assigned class label
+8. ClassID: Assigned class label(For training data only)
 
 ### Solution Statement
 
@@ -41,6 +41,6 @@ The matrics will be evaluated by the accuracy. The highest accuracy rate provide
 
 ### Project Design
 
-1. Data preprocessing: Load the the MNIST data, perform some preprocessing to the data. Split the data into training data and testing data.
-2. Training: Different training methods will be tried, such as K-nearest, SVM, CNN, deep learning with diffrent layer combinations.  After the training, the model will be applied to testing data..
-3. Testing and optimizing: Apply the trained model to the testing data and get the final accuracy of different models. Find the best way to do digit recognition. After choosing the best model, try different parameters to optimize the model.
+1. Data preprocessing: For each image, it will be scaled and transformed to greyscale image. Then some image augmentation will be done to inhance the quality. Also, some image might need flipping or rotation.
+2. Training: Plan to apply deep learning with different layer combinations, such as convolutional layer with some regularization.
+3. Testing and optimizing: Apply the trained model to the testing data and get the final accuracy of the model. Find the best way to do traffic sign recognition. After choosing the best model, try different parameters to optimize the model.
