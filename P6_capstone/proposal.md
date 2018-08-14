@@ -5,19 +5,27 @@ August 7th, 2018
 
 ### Domain Background
 
-Due to the high speed development of machine learning, this techinique has been used across our daily life. For example, autonoumous driving, which is an unimaginable concept maybe 15 years ago, is applied to real life and mature products have been manufactured to the market. However, machine learning is not only something far away or expensive to get in touch, we can find it everywhere now, such as the intelligent recommnedation of the music app and also what will be mainly discussed here -- Digit Reconginition.
+Due to the high speed development of machine learning, this techinique has been used across our daily life. For example, autonoumous driving, which is an unimaginable concept maybe 15 years ago, is applied to real life and mature products have been manufactured to the market. However, machine learning is not only something far away or expensive to get in touch, we can find it everywhere now, such as the intelligent recommnedation of the music app and also what will be mainly discussed here -- traffic sign recognition.
 
-Digits used worldwide are only comprised of 10 different characters, 0~9. It seems pretty simple to reconginize, espeacially when its the printed digit. However, when it comes to handwrite digits, the reconginition process will become more complicated. Differnt people have different writing styles. Or even, people from different areas or countries have different ways writing digits. With the help of machine learning, this problem can be resolved for computer to reconginize human writing digits.
+Traffic sign is what we can see everyday, especailly for those who need to drive. Traffic sign includes different types, such as stop sign, speed limit sign. Due to my personal interest in autonomous driving, I did a lot of research on what kind of techniques needed. The traffic sign recognition is one of the most basic and necessary part for the self-driving car. It needs the support of machine learning with enough data set.
 
 ### Problem Statement
 
-The prblem to be investigated here is how to use machine learning to realized handwritten digits recognition. MINIST dataset will be used as both training data and testing data. Differnt training methods will be appied, such as SVM, CNN, deep learning. After applying the model to testing data, a accuracy comparison will be done between different models to see which one has the best result. Some preprocessing of the input data might be done before training.
+The prblem to be investigated here is how to use machine learning to realized traffic sign recognition. German traffic sign dataset will be used as both training data and testing data. Some image processing needs to be done so that all the images can be better used as the input. Image augmentation might need to be done for the better recognition performance. For the model architecture, deep learning will be first considered.
 
 ### Datasets and Inputs
 
-The dataset is called MNIST, provided by Yann LeCun, Corinna Cortes and Christopher Burges. The dataset is used for evaluating machine learning models on the handwritten digit classification problem. Images of digits were taken from a variety of scanned documents, normalized in size and centered.
+The dataset is called GTSRB, known as German Traffic Sign Recognition Benchmark. GTSRB is a multi-class, single-image classification challenge held at the International Joint Conference on Neural Networks (IJCNN) 2011. 
 
-Each image is a 28 by 28 pixel square. For each image, there's a label represeting the 10 digits or 10 classes.
+The images contain one traffic sign each. They contain a border of 10 % around the actual traffic sign (at least 5 pixels) to allow for edge-based approaches. The image size vart between 15*15 to 250*250 pixels. Each image has an annotation which includes:
+-Filename: Filename of corresponding image
+-Width: Width of the image
+-Height: Height of the image
+-ROI.x1: X-coordinate of top-left corner of traffic sign bounding box
+-ROI.y1: Y-coordinate of top-left corner of traffic sign bounding box
+-ROI.x2: X-coordinate of bottom-right corner of traffic sign bounding box
+-ROI.y2: Y-coordinate of bottom-right corner of traffic sign bounding box
+-ClassID: Assigned class label
 
 ### Solution Statement
 
