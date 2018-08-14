@@ -18,8 +18,8 @@ The prblem to be investigated here is how to use machine learning to realized tr
 The dataset is called GTSRB, known as German Traffic Sign Recognition Benchmark. GTSRB is a multi-class, single-image classification challenge held at the International Joint Conference on Neural Networks (IJCNN) 2011. 
 
 The images contain one traffic sign each. They contain a border of 10 % around the actual traffic sign (at least 5 pixels) to allow for edge-based approaches. The image size vart between 15*15 to 250*250 pixels. Each image has an annotation which includes:
--Filename: Filename of corresponding image
--Width: Width of the image
+1. Filename: Filename of corresponding image
+2. Width: Width of the image
 -Height: Height of the image
 -ROI.x1: X-coordinate of top-left corner of traffic sign bounding box
 -ROI.y1: Y-coordinate of top-left corner of traffic sign bounding box
